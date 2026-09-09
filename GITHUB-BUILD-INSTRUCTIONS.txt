@@ -1,0 +1,12 @@
+DAYS OF LOVE V2 - PHONE-ONLY BUILD
+
+If replacing your existing repository, upload DaysOfLove-v2-github-ready.zip to the repo root.
+Open Codespaces and run:
+
+rm -rf /tmp/dol-v2 && mkdir -p /tmp/dol-v2 && unzip -q DaysOfLove-v2-github-ready.zip -d /tmp/dol-v2 && rsync -a --delete --exclude .git /tmp/dol-v2/DaysOfLove-v2/ ./ && git add -A && git commit -m "Days of Love v2 romantic upgrade" && git push
+
+Then open GitHub > Actions > Build Android APK.
+Download the DaysOfLove-v2-APK artifact after the green check.
+Extract the artifact and install app-debug.apk.
+
+NOTE: If Android refuses to install over v1, uninstall v1 first because the original test build used a different debug signature.
